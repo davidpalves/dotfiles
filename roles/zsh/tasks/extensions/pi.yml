@@ -1,0 +1,22 @@
+
+- name: Clone pi
+  git:
+    repo: https://github.com/davidpierre21/pi
+    dest: /tmp/pi
+
+- name: Create custom themes folder
+  file:
+    path: "{{ zsh_custom }}/themes"
+    state: directory
+
+- name: Copy pi.zsh-theme
+  copy:
+    src: /tmp/pi/pi.zsh-theme
+    dest: "{{ zsh_custom }}/themes/pi.zsh-theme"
+    remote_src: yes
+    owner: '{{ ansible_user_id }}'
+
+- name: Remove /tmp/pi folder
+  file:
+    path: /tmp/pi
+    state: absent

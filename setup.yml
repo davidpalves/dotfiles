@@ -16,9 +16,6 @@
     - role: git
       tags:
         - git
-    - role: interface
-      tags:
-        - interface
     - role: fonts
       tags:
         - fonts
@@ -85,12 +82,6 @@
     - role: wallpapers
       tags:
         - wallpapers
-    - role: numix
-      tags:
-        - numix
-    - role: adapta
-      tags:
-        - adapta
     - role: flameshot
       tags:
         - flameshot

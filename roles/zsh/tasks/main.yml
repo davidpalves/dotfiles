@@ -17,13 +17,21 @@
     tags:
       - install-oh-my-zsh
 
-  - import_tasks: extensions/guri.yml
+  - import_tasks: extensions/pi.yml
     tags:
-      - install-guri
+      - install-pi
 
   - import_tasks: extensions/zsh-syntax-highlighting.yml
     tags:
       - install-zsh-syntax-highlightning
+
+  - import_tasks: extensions/zsh-autosuggestions.yml
+    tags:
+      - install-zsh-autosuggestions
+ 
+  - import_tasks: extensions/zsh-z.yml
+    tags:
+      - install-zsh-z
 
   - name: Copy .zshrc
     copy:

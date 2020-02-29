@@ -1,0 +1,5 @@
+
+- name: Clone zsh-autosuggestions
+  git:
+    repo: https://github.com/zsh-users/zsh-autosuggestions.git
+    dest: "{{ zsh_custom }}/plugins/zsh-autosuggestions"

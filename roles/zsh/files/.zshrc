@@ -29,5 +29,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-
-source "$HOME/.dotfiles/dotfiles.sh"
+# Dell G3 Keyboard Lightning management
+kbacklight () {
+        if [[ -n $1 ]]
+        then
+                echo $1s | sudo tee /sys/devices/platform/dell-laptop/leds/dell\:\:kbd_backlight/stop_timeout
+        else 
+                echo "120s" | sudo tee /sys/devices/platform/dell-laptop/leds/dell\:\:kbd_backlight/stop_timeout
+        fi
+}

@@ -19,30 +19,6 @@
     command: code --install-extension Shan.code-settings-sync
     become_user: '{{ ansible_user_id }}'
 
-  - block:
-    - name: Copy code.desktop
-      copy:
-        src: code.desktop
-        dest: '{{ ansible_env.HOME }}/.local/share/applications/code.desktop'
-        owner: '{{ ansible_user_id }}'
-
-    - name: Make sure {{ vscode_user_config }} exists
-      file:
-        path: '{{ vscode_user_config }}'
-        state: directory
-
-    - name: Copy settings.json
-      template:
-        src: 'settings.j2'
-        dest: '{{ vscode_user_config }}/settings.json'
-        owner: '{{ ansible_user_id }}'
-
-    - name: Copy syncLocalSettings.json
-      template:
-        src: 'syncLocalSettings.j2'
-        dest: '{{ vscode_user_config }}/syncLocalSettings.json'
-        owner: '{{ ansible_user_id }}'
-
     tags:
       - files
       - files-vscode

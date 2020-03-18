@@ -79,9 +79,6 @@
     - role: libreoffice
       tags:
        - libreoffice
-    - role: wallpapers
-      tags:
-        - wallpapers
     - role: flameshot
       tags:
         - flameshot

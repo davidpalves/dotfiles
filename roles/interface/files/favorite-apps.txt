@@ -1,8 +1,7 @@
 [
-    'termite.desktop',
-    'code.desktop',
-    'google-chrome.desktop',
+    'firefox.desktop',
     'org.gnome.Nautilus.desktop',
+    'code.desktop',
     'spotify.desktop',
-    'gnome-control-center.desktop'
+    'termite.desktop',
 ]

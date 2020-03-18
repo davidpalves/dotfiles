@@ -1,0 +1,22 @@
+- block:
+  - name: Check if Slack is installed
+    command: dpkg-query -W slack-desktop
+    register: slack_installed
+    ignore_errors: true
+
+  - name: Install Slack
+    apt:
+      deb: '{{ slack_deb_url }}'
+    when: slack_installed.rc != 0
+
+  - name: Copy slack.desktop
+    copy:
+      src: slack.desktop
+      dest: '{{ ansible_env.HOME }}/.local/share/applications/slack.desktop'
+      owner: '{{ ansible_user_id }}'
+    when: slack_installed.rc != 0
+    ignore_errors: true
+
+  tags:
+    - install
+    - install-slack

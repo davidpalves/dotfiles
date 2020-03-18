@@ -1,0 +1,5 @@
+
+- name: Clone zsh-z
+  git:
+    repo: https://github.com/agkozak/zsh-z
+    dest: "{{ zsh_custom }}/plugins/zsh-z"

@@ -1,4 +1,4 @@
-# VictorFSF's dotfiles
+# davidpalves's dotfiles
 
 Made with [ansible](https://www.ansible.com/) for [`Ubuntu 18.04 LTS`](http://releases.ubuntu.com/18.04/) (bionic).
 Must be used locally.

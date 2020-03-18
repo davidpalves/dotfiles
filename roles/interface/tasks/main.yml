@@ -25,10 +25,10 @@
         state: present
         user: '{{ ansible_user_id }}'
 
-    - name: Move button layout to left
+    - name: Move button layout to right
       gsettings:
         key: org.gnome.desktop.wm.preferences.button-layout
-        value: "'close,minimize,maximize:'"
+        value: "':minimize,maximize,close'"
         state: present
         user: '{{ ansible_user_id }}'
 
@@ -68,8 +68,6 @@
     tags:
       - gsettings
       - gsettings-interface
-
-  - import_tasks: panel-osd.yml
 
   tags:
     - install

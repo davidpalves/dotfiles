@@ -1,0 +1,29 @@
+- block:
+    - name: Check if Albert is installed
+      command: dpkg-query -W albert
+      register: albert_installed
+      ignore_errors: true
+  
+    - name: Install Albert
+      apt:
+        deb: '{{ albert_deb_url }}'
+      when: albert_installed.rc != 0
+  
+    - name: Copy albert.desktop
+      copy:
+        src: albert.desktop
+        dest: '{{ ansible_env.HOME }}/.local/share/applications/albert.desktop'
+        owner: '{{ ansible_user_id }}'
+      when: albert_installed.rc != 0
+      ignore_errors: true
+    
+    - name: Copy .albert.conf
+      copy:
+        src: .albert.conf
+        dest: '{{ ansible_env.HOME }}/.config/albert/.albert.conf'
+        owner: '{{ ansible_user_id }}'
+
+    tags:
+      - install
+      - install-albert
+  

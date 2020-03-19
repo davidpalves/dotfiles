@@ -91,3 +91,9 @@ resty_version: 'master'
 # flameshot
 
 flameshot_override_default_keybindings: true
+
+# Albert Launcher
+
+ubuntu_version: '18.04'
+
+albert_version: '0.16.1'

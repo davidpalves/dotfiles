@@ -1,0 +1,1 @@
+albert_deb_url: 'https://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_{{ ubuntu_version }}/amd64/albert_{{ albert_version }}_amd64.deb'

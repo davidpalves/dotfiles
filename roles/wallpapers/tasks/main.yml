@@ -16,7 +16,7 @@
     - name: Copy screensaver.png
       copy:
         src: screensaver.png
-        dest: '{{ wallpapers_dir }}/screensaver.png'
+        dest: '{{ wallpapers_dir }}/screensaver.jpg'
         owner: "{{ ansible_user_id }}"
 
     tags:
@@ -34,7 +34,7 @@
     - name: Set screensaver
       gsettings:
         key: org.gnome.desktop.screensaver.picture-uri
-        value: "file:///usr/share/backgrounds/adapta/tealized.jpg"
+        value: "file://{{ wallpapers_dir }}/screensaver.jpg"
         state: present
         user: '{{ ansible_user_id }}'
 

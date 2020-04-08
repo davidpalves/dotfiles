@@ -79,6 +79,18 @@
     - role: gimp
       tags:
        - gimp
+    - role: albert
+      tags:
+       - albert
+    - role: discord
+      tags:
+       - discord
+    - role: slack
+      tags:
+       - slack
+    - role: telegram
+      tags:
+       - telegram
     - role: libreoffice
       tags:
        - libreoffice

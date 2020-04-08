@@ -23,7 +23,7 @@
         dest: '{{ ansible_env.HOME }}/.config/albert/.albert.conf'
         owner: '{{ ansible_user_id }}'
 
-    tags:
-      - install
-      - install-albert
+  tags:
+    - install
+    - install-albert
   

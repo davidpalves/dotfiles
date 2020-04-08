@@ -92,8 +92,12 @@ resty_version: 'master'
 
 flameshot_override_default_keybindings: true
 
-# Albert Launcher
+# albert launcher
 
 ubuntu_version: '18.04'
 
 albert_version: '0.16.1'
+
+# slack
+
+slack_version: '4.2.0'
